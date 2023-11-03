@@ -1,0 +1,101 @@
+
+#nav{
+    .nav_top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ABD373;
+        padding: 13px 100px;
+        color: #fff;
+        font-weight: 400;
+
+        p{
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        // .lang_select{
+
+        // }
+    }
+
+    .nav_middle{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 100px;
+        border-bottom: 1px solid #ccc;
+        .contact_phone{
+            display: flex;
+            align-items: center;
+            div{
+                background-color: #ABD373;
+                width: 44px;
+                height: 42px;
+                padding: 10px;
+                border-radius: 6px;
+                font-size: 1.3rem;
+                color: #fff;
+                display: grid;
+                place-items: center;                
+                // text-align: center;
+
+            }
+        }
+        .nav_info{
+            ul{
+                display: flex;
+                align-items: center;
+
+                i{
+                    color: #666;
+                    padding:10px ;
+                    font-size: 1.1rem;
+                }
+            }
+            
+        }
+    }
+}
+
+#overlay{
+position: fixed; 
+  display: none;
+  width: 100%;
+  height: 100%; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2;
+  cursor: pointer;
+  color: #fff;
+  &.active{
+    display: block;
+    }
+  .inp_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+        p{
+            font-size: 1.3rem;
+        }
+        input{
+            border: none;
+            outline: none;
+            background: none;
+            padding: 20px 90px;
+            font-size: 2rem;
+            border-bottom: 1px solid #fff;
+
+            &::placeholder{
+                text-align: center;
+                color: #666;
+            }
+        }
+    }
+   
+}
