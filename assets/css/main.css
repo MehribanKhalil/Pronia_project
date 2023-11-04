@@ -21,6 +21,10 @@ ul, li {
   padding: 0;
 }
 
+::selection {
+  background: #abd373;
+}
+
 * {
   font-family: "Rubik", sans-serif;
 }
@@ -64,13 +68,16 @@ ul, li {
   display: flex;
   align-items: center;
 }
-#nav .nav_middle .nav_info ul i {
+#nav .nav_middle .nav_info ul li a {
+  text-decoration: none;
+}
+#nav .nav_middle .nav_info ul li a i {
   color: #4c4c4c;
   padding: 10px;
   font-size: 1.1rem;
 }
-#nav .nav_bottom {
-  border-bottom: 1px solid #4c4c4c;
+#nav .nav_middle .nav_info ul li a .fa-bars {
+  display: none;
 }
 #nav .nav_bottom .navbar_list .list_item {
   position: relative;
@@ -82,7 +89,8 @@ ul, li {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   visibility: visible;
   opacity: 1;
-  transition: all 0.3s ease 0s;
+  transition: all 0.5s ease 0s;
+  transform-origin: top center;
   transform: scaleY(1);
 }
 #nav .nav_bottom .navbar_list .list_item a {
@@ -97,14 +105,19 @@ ul, li {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   visibility: hidden;
   opacity: 0;
-  transition: all 0.3s ease 0s;
-  transform: scale(0);
+  transition: all 0.5s ease 0s;
+  transform: scaleY(0);
+  transform-origin: top center;
 }
 #nav .nav_bottom .navbar_list .list_item .submenu .dropdown-item {
   padding-bottom: 10px;
 }
 #nav .nav_bottom .navbar_list .list_item .submenu .dropdown-item a {
   font-size: 1.08rem;
+  text-transform: lowercase;
+}
+#nav .nav_bottom .navbar_list .list_item .shop_menu h4 {
+  font-size: 1rem;
 }
 
 #overlay {
@@ -146,4 +159,159 @@ ul, li {
 #overlay .inp_div input::placeholder {
   text-align: center;
   color: #4c4c4c;
+}
+
+.side_bar {
+  background-color: #333333;
+  position: fixed;
+  top: 0;
+  width: 400px;
+  transform: translateX(-400px);
+  height: 100%;
+  transition: 0.5s;
+}
+.side_bar .side_bar_content {
+  padding: 70px 0;
+  position: relative;
+}
+.side_bar .side_bar_content .side_nav_close {
+  color: #fff;
+  text-align: right;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 30px;
+}
+.side_bar .side_bar_content .contact_phone {
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+}
+.side_bar .side_bar_content .contact_phone div {
+  background-color: #abd373;
+  width: 44px;
+  height: 42px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1.3rem;
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+.side_bar .side_bar_content .contact_phone .phone_num {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.side_bar .side_bar_content .side_bar_select {
+  padding: 20px 30px;
+  display: flex;
+  gap: 20px;
+}
+.side_bar .side_bar_content .side_bar_select div {
+  cursor: pointer;
+  color: #fff;
+}
+.side_bar .side_bar_content .side_bar_select div a {
+  color: #fff;
+}
+.side_bar .side_bar_content .side_nav {
+  padding: 20px;
+}
+.side_bar .side_bar_content .side_nav .navbar_list .list_item {
+  color: #fff;
+  font-size: 0.9rem;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.side_bar .side_bar_content .side_nav .navbar_list .list_item .submenu {
+  overflow: hidden;
+  height: 0px !important;
+  padding: 0;
+  transition: all 0.4s ease;
+}
+.side_bar .side_bar_content .side_nav .navbar_list .list_item .submenu.active {
+  height: 100px !important;
+  transition: all 0.4s ease;
+  height: 0;
+  background-color: #3d3d3d;
+  padding: 10px;
+}
+.side_bar .side_bar_content .side_nav .navbar_list .list_item a {
+  text-decoration: none;
+  color: inherit;
+}
+.side_bar.side_bar_active {
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 992px) {
+  #nav .nav_top {
+    display: none;
+  }
+  #nav .nav_middle {
+    padding: 30px;
+  }
+  #nav .nav_middle .contact_phone {
+    background-color: aqua;
+    display: none;
+  }
+  #nav .nav_middle .nav_info ul li a .fa-users {
+    display: none;
+  }
+  #nav .nav_middle .nav_info ul li a .fa-heart {
+    display: none;
+  }
+  #nav .nav_middle .nav_info ul li a .fa-bars {
+    display: block;
+  }
+  #nav .nav_bottom {
+    display: none;
+  }
+}
+#btn_main {
+  border: none;
+  background-color: #abd373;
+  padding: 15px 25px;
+  border-radius: 23px;
+}
+#btn_main a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+#intro_section {
+  background-image: url(https://htmldemo.net/pronia/pronia/assets/images/slider/bg/1-1.jpg);
+  position: relative;
+}
+#intro_section:hover .slider-buttons .fa-solid {
+  visibility: visible;
+  opacity: 1;
+}
+#intro_section .slider-buttons .fa-solid {
+  visibility: none;
+  opacity: 0;
+  position: absolute;
+  background-color: #fff;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin: 0 15px;
+}
+#intro_section .slider-buttons .fa-solid:hover {
+  background-color: #abd373;
+  color: #fff;
+}
+#intro_section .slider-buttons .fa-angle-left {
+  left: 0;
+  top: 50%;
+}
+#intro_section .slider-buttons .fa-angle-right {
+  right: 0;
+  top: 50%;
 }/*# sourceMappingURL=main.css.map */

@@ -1,214 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./assets/css/main.css">
+    <!-- link bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+
+    <!-- link fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- link css -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- header start -->
     <header id="header">
-        <!-- navbar start -->
+      <!-- navbar start -->
 
-        <nav id="nav">
+      <nav id="nav">
+        <div class="nav_top">
+          <div>
+            <p>HELLO EVERYONE! 25% Off All Products</p>
+          </div>
+          <div class="lang_select">
+            <span class="pe-2">USD <i class="fa-solid fa-angle-down"></i></span>
+            <span>English <i class="fa-solid fa-angle-down"></i></span>
+          </div>
+        </div>
 
-            <div class="nav_top">
+        <div class="nav_middle">
+          <div class="contact_phone ">
+            <div class="me-3"><i class="fa-solid fa-phone"></i></div>
+            <span>+00 123 456 789</span>
+          </div>
 
-                <div>
-                    <p>HELLO EVERYONE! 25% Off All Products</p>
-                </div>
-                <div class="lang_select">
-                    <span>USD</span>
-                    <span>English</span>
-                </div>
+          <div class="nav_logo">
+            <img
+              src="https://htmldemo.net/pronia/pronia/assets/images/logo/dark.png"
+              alt=""
+            />
+          </div>
 
-            </div>
+          <div class="nav_info">
+            <ul>
+              <li>
+                <a href=""
+                  ><i class="fa-solid fa-magnifying-glass nav_search_icon"></i
+                ></a>
+              </li>
 
-            <div class="nav_middle">
+              <li>
+                <a href="#"><i class="fa-solid fa-users"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-bars"></i></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
 
-                <div class="contact_phone d-flex">
-                    <div class="me-3"> <i class="fa-solid fa-phone"></i></div>
-                    <span>+00 123 456 789</span>
-                </div>
+        <div class="nav_bottom">
+          <div class="container">
+            <ul class="navbar_list d-flex justify-content-center gap-3">
+              <li class="list_item sublist-item text-uppercase">
+                <a href="" class="pt-3 pb-3">home</a>
+              </li>
 
-                <div class="nav_logo">
-                    <img src="https://htmldemo.net/pronia/pronia/assets/images/logo/dark.png" alt="">
-                </div>
-
-                <div class="nav_info">
+              <li class="list_item sublist-item">
+                <a href="" class="pt-3 pb-3 text-uppercase">shop</a>
+                <ul class="submenu shop_menu d-flex">
+                  <li>
+                    <h6>SHOP LAYOUT</h6>
                     <ul>
-                        <li><a href=""><i class="fa-solid fa-magnifying-glass nav_search_icon"></i></a></li>
-                        
-                        <li><a href=""><i class="fa-solid fa-users"></i></a></li>
-                        <li><a href=""><i class="fa-regular fa-heart"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-bag-shopping"></i></a></li>
+                      <li class="dropdown-item">
+                        <a href="" class="submenu_link">Shop Default</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href="">Shop Grid Fullwidth</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href="">Shop Right Sidebar</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href="">Shop List Fullwidth</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href=""
+                          >Shop List Left Sidebar</a
+                        >
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href=""
+                          >Shop List Right Sidebar</a
+                        >
+                      </li>
                     </ul>
-                                                    
-                    
-                </div>
+                  </li>
 
-            </div>
+                  <li>
+                    <h6>SHOP LAYOUT</h6>
+                    <ul>
+                      <li class="dropdown-item">
+                        <a href="" class="submenu_link text-uppercase"
+                          >Shop Default</a
+                        >
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href="">Shop Grid Fullwidth</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href="">Shop Right Sidebar</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href="">Shop List Fullwidth</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href=""
+                          >Shop List Left Sidebar</a
+                        >
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href=""
+                          >Shop List Right Sidebar</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
 
-            
-            <div class="nav_bottom ">
-                <div class="container">
-                    <ul class="navbar_list d-flex justify-content-center gap-3 ">
+                  <li>
+                    <h6>SHOP LAYOUT</h6>
+                    <ul>
+                      <li class="dropdown-item">
+                        <a href="" class="submenu_link">Shop Default</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href="">Shop Grid Fullwidth</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href="">Shop Right Sidebar</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href="">Shop List Fullwidth</a>
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href=""
+                          >Shop List Left Sidebar</a
+                        >
+                      </li>
+                      <li class="dropdown-item">
+                        <a class="submenu_link" href=""
+                          >Shop List Right Sidebar</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
-                        <li class="list_item text-uppercase ">
-                            <a href="" class="pt-3 pb-3">home</a>
-                        </li>
+              <li class="list_item sublist-item">
+                <a href="" class="pt-3 pb-3 text-uppercase">blog</a>
 
-                        <li class="list_item text-uppercase ">
-                            <a href="" class="pt-3 pb-3">shop</a>
-                            <ul class="submenu shop_menu d-none d-flex">
+                <ul class="submenu">
+                  <li class="dropdown-item dropdown-item">
+                    <a href="" class="submenu_link">Blog List View</a>
+                  </li>
 
-                                <li>
-                                    <h4>SHOP LAYOUT</h4>
-                                    <ul>
-                                        <li class="dropdown-item">
-                                            <a href="" class="submenu_link">Shop Default</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop Grid Fullwidth</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop Right Sidebar</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop List Fullwidth</a> 
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop List Left Sidebar</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop List Right Sidebar</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                  <li class="dropdown-item">
+                    <a class="submenu_link" href="">Blog Detail</a>
+                  </li>
 
-                                <li>
-                                    <h4>SHOP LAYOUT</h4>
-                                    <ul>
-                                        <li class="dropdown-item">
-                                            <a href="" class="submenu_link text-uppercase ">Shop Default</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop Grid Fullwidth</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop Right Sidebar</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop List Fullwidth</a> 
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop List Left Sidebar</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop List Right Sidebar</a>
-                                        </li>
-                                    </ul>
-                                </li>
+                  <li class="dropdown-item">
+                    <a class="submenu_link" href="">Multi level dropdown</a>
 
-                                <li>
-                                    <h4>SHOP LAYOUT</h4>
-                                    <ul>
-                                        <li class="dropdown-item">
-                                            <a href="" class="submenu_link">Shop Default</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop Grid Fullwidth</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop Right Sidebar</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop List Fullwidth</a> 
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop List Left Sidebar</a>
-                                        </li>
-                                        <li class="dropdown-item">
-                                            <a class="submenu_link"href="">Shop List Right Sidebar</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="list_item">
-                            <a href="" class="pt-3 pb-3 text-uppercase ">blog</a>
-
-                            <ul class="submenu">
-                                <li class="dropdown-item dropdown-item">
-                                    <a href="" class="submenu_link">Blog List View</a>
-                                </li>
-
-                                <li class="dropdown-item">
-                                    <a class="submenu_link" href="">Blog Detail</a>
-                                </li>
-
-                                <li class="dropdown-item">
-                                    <a class="submenu_link" href="">Multi level dropdown</a>
-
-                                    <!-- <ul class="submenu">
+                    <!-- <ul class="submenu">
                                         <li class="dropdown-item"><a href="">Level 02</a></li>
                                     </ul> -->
-                                </li>
+                  </li>
+                </ul>
+              </li>
 
-                            </ul>
+              <li class="list_item">
+                <a href="" class="pt-3 pb-3 text-uppercase">about us</a>
+              </li>
 
-                        </li>
+              <li class="list_item">
+                <a href="" class="pt-3 pb-3 text-uppercase">pages</a>
+                <ul class="submenu">
+                  <li class="dropdown-item">
+                    <a class="submenu_link" href="">FAQ</a>
+                  </li>
 
-                        <li class="list_item">
-                            <a href="" class="pt-3 pb-3 text-uppercase ">about us</a>
-                        </li>
+                  <li class="dropdown-item">
+                    <a class="submenu_link" href="">Error 404</a>
+                  </li>
+                </ul>
+              </li>
 
-                        <li class="list_item">
-                            <a href="" class="pt-3 pb-3 text-uppercase ">pages</a>
-                            <!-- <ul class="submenu">
+              <li class="list_item text-uppercase">
+                <a href="" class="pt-3 pb-3">contact us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- navbar end -->
 
-                                <li class="dropdown-item">
-                                    <a class="submenu_link" href="">FAQ</a>
-                                </li>
 
-                                <li class="dropdown-item">
-                                    <a class="submenu_link" href="">Error 404</a>
-                                </li>
-
-                            </ul> -->
-                        </li>
-
-                        <li class="list_item text-uppercase " ><a href="" class="pt-3 pb-3">contact us</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-
-        </nav>
-         <!-- navbar end -->
-         
-        <div id="overlay">
+      <!-- overlay menu start -->
+      <div id="overlay">
         <div class="container inp_div">
-            <p>Start typing and press Enter to search or ESC to close</p>
-            <input type="search" placeholder="Search...">
+          <p>Start typing and press Enter to search or ESC to close</p>
+          <input type="search" placeholder="Search..." />
         </div>
+      </div>
+      <!-- overlay menu end -->
+
+
+
+      <!-- side  menu start -->
+      <div class="side_bar">
+        <div class="side_bar_content">
+
+        <div class="side_nav_close"><i class="fa-solid fa-x"></i></div>
+
+            <div class="contact_phone">
+                <div class="me-3"><i class="fa-solid fa-phone"></i></div>
+                <span class="phone_num">+00 123 456 789</span>
+            </div>
+
+            <div class="side_bar_select ">
+                <div>
+                    <span>USD</span> <i class="fa-solid fa-angle-down"></i>
+                </div>
+
+                <div>
+                    <span>English</span> <i class="fa-solid fa-angle-down"></i>
+                </div>
+
+
+                <div>
+                    <a href=""><i class="fa-solid fa-users"></i> <i class="fa-solid fa-angle-down"></i></a>
+                </div>
+               
+                <div>
+                    <a href=""><i class="fa-regular fa-heart"></i></a>
+                </div>
+
+            </div>
+
+            <nav class="side_nav">
+                <ul class="navbar_list">
+
+                <li class="list_item text-uppercase">
+                    <a href="" class="pt-3 pb-3">home</a> 
+                </li>
+
+                <!-- <li class="list_item">
+                    <a href="" class="pt-3 pb-3 text-uppercase">shop</a>
+                    <ul class="submenu shop_menu d-flex">
+                    <li>
+                        <h6>SHOP LAYOUT</h6>
+                        <ul>
+                        <li class="dropdown-item">
+                            <a href="" class="submenu_link">Shop Default</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href="">Shop Grid Fullwidth</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href="">Shop Right Sidebar</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href="">Shop List Fullwidth</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href=""
+                            >Shop List Left Sidebar</a
+                            >
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href=""
+                            >Shop List Right Sidebar</a
+                            >
+                        </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h6>SHOP LAYOUT</h6>
+                        <ul>
+                        <li class="dropdown-item">
+                            <a href="" class="submenu_link text-uppercase"
+                            >Shop Default</a
+                            >
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href="">Shop Grid Fullwidth</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href="">Shop Right Sidebar</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href="">Shop List Fullwidth</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href=""
+                            >Shop List Left Sidebar</a
+                            >
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href=""
+                            >Shop List Right Sidebar</a
+                            >
+                        </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h6>SHOP LAYOUT</h6>
+                        <ul>
+                        <li class="dropdown-item">
+                            <a href="" class="submenu_link">Shop Default</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href="">Shop Grid Fullwidth</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href="">Shop Right Sidebar</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href="">Shop List Fullwidth</a>
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href=""
+                            >Shop List Left Sidebar</a
+                            >
+                        </li>
+                        <li class="dropdown-item">
+                            <a class="submenu_link" href=""
+                            >Shop List Right Sidebar</a
+                            >
+                        </li>
+                        </ul>
+                    </li>
+                    </ul>
+                </li> -->
+
+                <li class="list_item active">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="" class="pt-3 pb-3 text-uppercase">blog</a> <i class="fa-solid fa-angle-down"></i>
+                    </div>
+
+                    <ul class="submenu">
+                    <li class="dropdown-item dropdown-item">
+                        <a href="" class="submenu_link">Blog List View</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                        <a class="submenu_link" href="">Blog Detail</a>
+                    </li>
+
+                    </ul>
+                    
+                </li>
+
+
+                <li class="list_item">
+                    <a href="" class="pt-3 pb-3 text-uppercase">about us</a>
+                </li>
+
+                <li class="list_item ">
+                    
+                    <div  class="d-flex justify-content-between align-items-center">
+                        <a href="" class="pt-3 pb-3 text-uppercase">pages</a> <i class="fa-solid fa-angle-down"></i>
+                    </div>
+
+                    <ul class="submenu">
+                    <li class="dropdown-item">
+                        <a class="submenu_link" href="">FAQ</a>
+                    </li>
+
+                    <li class="dropdown-item">
+                        <a class="submenu_link" href="">Error 404</a>
+                    </li>
+                    </ul>
+                </li>
+
+                <li class="list_item text-uppercase">
+                    <a href="" class="pt-3 pb-3">contact us</a>
+                </li>
+                </ul>
+            </nav>
         </div>
+      </div>
+      <!-- side  menu end -->
+
     </header>
     <!-- header end -->
-   
-    
+
+
+
+    <!-- main start -->
+
+    <!-- intro section start  -->
+        <section id="intro_section">
+            
+            <div class="slider-buttons">
+                <div><i class="fa-solid fa-angle-right"></i></div>
+                <div><i class="fa-solid fa-angle-left"></i></i></div>
+            </div>
+            
+            <div class="container">
+                
+                <div class="row">
+                    <div class="intro-left col-12 col-md-6">
+                        <h2>65% OFF</h2>
+                        <h1>New plant</h1>
+                        <p>Pronia, With 100% Natural, Organic & Plant Shop.</p>
+                         <button id="btn_main"><a href="">Discover now</a></button>
+        
+                    </div>
+        
+        
+                    <div class="intro-right col-12 col-md-6">
+                        <div class="container">
+                            <img src="https://htmldemo.net/pronia/pronia/assets/images/slider/inner-img/1-1-524x617.png" alt="">
+
+                            <!-- <img src="" class="sliderImg" alt=""> -->
+
+                        </div>
+                    </div>
+        
+                </div>
+            </div>          
+       </section>
+    <!-- intro section start  -->
+
+    <!-- main end -->
 
     <script src="./assets/js/main.js"></script>
-</body>
-
+    <script src="./assets/js/accardion.js"></script>
+    <script src="./assets/js/slider.js"></script>
+  </body>
 </html>
