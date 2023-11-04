@@ -29,7 +29,7 @@ ul, li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ABD373;
+  background-color: #abd373;
   padding: 13px 100px;
   color: #fff;
   font-weight: 400;
@@ -50,7 +50,7 @@ ul, li {
   align-items: center;
 }
 #nav .nav_middle .contact_phone div {
-  background-color: #ABD373;
+  background-color: #abd373;
   width: 44px;
   height: 42px;
   padding: 10px;
@@ -65,9 +65,46 @@ ul, li {
   align-items: center;
 }
 #nav .nav_middle .nav_info ul i {
-  color: #666;
+  color: #4c4c4c;
   padding: 10px;
   font-size: 1.1rem;
+}
+#nav .nav_bottom {
+  border-bottom: 1px solid #4c4c4c;
+}
+#nav .nav_bottom .navbar_list .list_item {
+  position: relative;
+}
+#nav .nav_bottom .navbar_list .list_item:hover .submenu {
+  position: absolute;
+  background-color: #abd373;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+  transform: scaleY(1);
+}
+#nav .nav_bottom .navbar_list .list_item a {
+  text-decoration: none;
+  color: #4c4c4c;
+  font-size: 0.9rem;
+  display: block;
+}
+#nav .nav_bottom .navbar_list .list_item .submenu {
+  position: absolute;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+  transform: scale(0);
+}
+#nav .nav_bottom .navbar_list .list_item .submenu .dropdown-item {
+  padding-bottom: 10px;
+}
+#nav .nav_bottom .navbar_list .list_item .submenu .dropdown-item a {
+  font-size: 1.08rem;
 }
 
 #overlay {
@@ -108,5 +145,5 @@ ul, li {
 }
 #overlay .inp_div input::placeholder {
   text-align: center;
-  color: #666;
+  color: #4c4c4c;
 }/*# sourceMappingURL=main.css.map */

@@ -1,5 +1,9 @@
 @import './base/reset';
 @import './base/typography';
-@import './layout/navbar';
+
+@import'./utils/variables';
+
 @import './layout/header';
+@import './layout/navbar';
+
 @import './pages/home';
