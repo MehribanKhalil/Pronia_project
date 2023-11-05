@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+}
+
+a{
     text-decoration: none;
     color: inherit;
 }
@@ -18,6 +21,12 @@ ul,li{
     padding: 0;
 }
 
+.row{
+    margin: 0;
+    padding: 0;
+}
+
 ::selection {
   background:#abd373;
+  color: #fff;
 }

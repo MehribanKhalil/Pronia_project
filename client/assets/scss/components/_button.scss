@@ -1,0 +1,51 @@
+.btn_main{
+    border: none;
+    background-color: $main-color;
+    padding: 20px 45px;
+    border-radius: 23px;
+    a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    &:hover{
+        background-color: $secondary-color;
+        transition: all .4s ease;
+    }
+
+    @media screen and (max-width:992px) {
+        padding: 10px 25px;
+        a{
+            font-size: 0.9rem;
+        }
+    }
+}
+
+
+//btn small
+.btn_small{
+    border: none;
+    background-color: $main-color;
+    padding: 10px 25px;
+    border-radius: 23px;
+    a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+
+    &:hover{
+        background-color: $secondary-color;
+        transition: all .4s ease;
+    }
+
+    // @media screen and (max-width:992px) {
+    //     padding: 10px 25px;
+    //     a{
+    //         font-size: 0.9rem;
+    //     }
+    // }
+}

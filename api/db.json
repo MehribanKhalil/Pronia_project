@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productImage":"https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-1-270x300.jpg",
+      "productName": "American Marigold",
+      "productPrice": "23.45",
+      "productCategory":"Latest",
+      "productRating":5
+    },
+    {
+      "id": 2,
+      "productImage":"https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-2-270x300.jpg",
+      "productName": "Black Eyed Susan",
+      "productPrice": "25.45",
+      "productCategory":"Featured",
+      "productRating":5
+    },
+    {
+      "id": 3,
+      "productImage":"https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-3-270x300.jpg",
+      "productName": "Bleeding Heart",
+      "productPrice": "30.45",
+      "productCategory":"Featured",
+      "productRating":5
+    },
+    {
+      "id": 4,
+      "productImage":"https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-4-270x300.jpg",
+      "productName": "Bloody Cranesbill",
+      "productPrice": "45.00",
+      "productCategory":"Featured",
+      "productRating":5
+    },
+    {
+      "id": 5,
+      "productImage":"https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-5-270x300.jpg",
+      "productName": "Butterfly Weed",
+      "productPrice": "50.45",
+      "productCategory":"Latest",
+      "productRating":5
+    },
+    {
+      "id": 6,
+      "productImage":"https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-6-270x300.jpg",
+      "productName": "Common Yarrow",
+      "productPrice": "65.00",
+      "productCategory":"Featured",
+      "productRating":5
+    },
+    {
+        "id": 7,
+        "productImage":"https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-7-270x300.jpg",
+        "productName": "Doublefile Viburnum",
+        "productPrice": "67.45",
+        "productCategory":"Bestseller",
+        "productRating":5
+    },
+    {
+        "id": 8,
+        "productImage":"https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-8-270x300.jpg",
+        "productName": "Feather Reed Grass",
+        "productPrice": "20.00",
+        "productCategory":"Featured",
+        "productRating":5
+    }
+  ]
+}
+
+

@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="./assets/images/Tea_plant.png" type="image/x-icon">
+
+    <!-- link aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- link bootstrap -->
     <link
       rel="stylesheet"
@@ -22,7 +28,7 @@
 
     <!-- link css -->
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <title>Document</title>
+    <title>Pronia</title>
   </head>
 
   <body>
@@ -69,7 +75,9 @@
                 <a href="#"><i class="fa-regular fa-heart"></i></a>
               </li>
               <li>
-                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="#"><i class="basketCounet fa-solid fa-bag-shopping"><span class="count">0</span></i>
+                    
+                </a>
               </li>
               <li>
                 <a href="#"><i class="fa-solid fa-bars"></i></i></a>
@@ -80,14 +88,14 @@
 
         <div class="nav_bottom">
           <div class="container">
-            <ul class="navbar_list d-flex justify-content-center gap-3">
+            <ul class="navbar_list d-flex justify-content-center gap-4">
               <li class="list_item sublist-item text-uppercase">
-                <a href="" class="pt-3 pb-3">home</a>
+                <a href="" class="py-3">home</a>
               </li>
 
               <li class="list_item sublist-item">
-                <a href="" class="pt-3 pb-3 text-uppercase">shop</a>
-                <ul class="submenu shop_menu d-flex">
+                <a href="" class="py-3 text-uppercase">shop</a>
+                <ul class="submenu_main shop_menu d-flex">
                   <li>
                     <h6>SHOP LAYOUT</h6>
                     <ul>
@@ -177,9 +185,9 @@
               </li>
 
               <li class="list_item sublist-item">
-                <a href="" class="pt-3 pb-3 text-uppercase">blog</a>
+                <a href="" class="py-3 text-uppercase">blog</a>
 
-                <ul class="submenu">
+                <ul class="submenu_main">
                   <li class="dropdown-item dropdown-item">
                     <a href="" class="submenu_link">Blog List View</a>
                   </li>
@@ -199,12 +207,12 @@
               </li>
 
               <li class="list_item">
-                <a href="" class="pt-3 pb-3 text-uppercase">about us</a>
+                <a href="" class="py-3 text-uppercase">about us</a>
               </li>
 
               <li class="list_item">
-                <a href="" class="pt-3 pb-3 text-uppercase">pages</a>
-                <ul class="submenu">
+                <a href="" class="py-3 text-uppercase">pages</a>
+                <ul class="submenu_main">
                   <li class="dropdown-item">
                     <a class="submenu_link" href="">FAQ</a>
                   </li>
@@ -216,7 +224,7 @@
               </li>
 
               <li class="list_item text-uppercase">
-                <a href="" class="pt-3 pb-3">contact us</a>
+                <a href="" class="py-3">contact us</a>
               </li>
             </ul>
           </div>
@@ -414,9 +422,53 @@
       </div>
       <!-- side  menu end -->
 
+
+
+       <!-- basket  menu start -->
+        <div class="basket_menu">
+            <div class="basket_menu_content">
+
+                <div class="d-flex align-items-center justify-content-between mb-4">
+
+                    <h4 class="m-0">Shopping Cart</h4>
+                    <div class="basket_menu_close">
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+
+                </div>
+
+                <div class="basket_content">
+                    <div class="basket_carts">
+
+                        <div class="basket_cart">
+
+                            <div class="cart_img">
+                                <img src="https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-1-270x300.jpg"" alt="">
+                            </div>
+
+                            <div class="cart_content">
+                                <h6>American Marigold</h6>
+                                <div>
+                                    <span class="item_count">1</span>
+                                    <span>x</span>
+                                    <span class="item_price">$34,77</span>
+                                </div>
+                            </div>
+
+                            <div class="item_remove">
+                                <i class="fa-solid fa-x"></i>
+                            </div>
+
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+      <!-- basket  menu end -->
+
     </header>
     <!-- header end -->
-
 
 
     <!-- main start -->
@@ -429,23 +481,20 @@
                 <div><i class="fa-solid fa-angle-left"></i></i></div>
             </div>
             
-            <div class="container">
+            <div class="container" >
                 
-                <div class="row">
-                    <div class="intro-left col-12 col-md-6">
-                        <h2>65% OFF</h2>
-                        <h1>New plant</h1>
-                        <p>Pronia, With 100% Natural, Organic & Plant Shop.</p>
-                         <button id="btn_main"><a href="">Discover now</a></button>
+                <div class="row flex-column-reverse align-items-center flex-lg-row">
+                    <div class="intro-left  col-md-12 col-lg-6">
+                        <h2 class="header_h2">65% OFF</h2>
+                        <h1 class="header_h1">New plant</h1>
+                        <p class="header_p">Pronia, With 100% Natural, Organic & Plant Shop.</p>
+                         <button class="btn_main"><a href="">Discover now</a></button>
         
                     </div>
         
-        
-                    <div class="intro-right col-12 col-md-6">
-                        <div class="container">
-                            <img src="https://htmldemo.net/pronia/pronia/assets/images/slider/inner-img/1-1-524x617.png" alt="">
-
-                            <!-- <img src="" class="sliderImg" alt=""> -->
+                    <div class="intro-right  col-md-12 col-lg-6">
+                        <div class="">
+                            <img src="" class="sliderImg" alt="">
 
                         </div>
                     </div>
@@ -455,10 +504,315 @@
        </section>
     <!-- intro section start  -->
 
+
+    <!--  our services  section start -->
+       <section id="our_services">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="service col-12 col-md-6 col-lg-4  mb-3">
+
+                   <div class="service_item">
+                        <div class="service_img">
+                            <img src="https://htmldemo.net/pronia/pronia/assets/images/shipping/icon/car.png" alt="">
+                        </div>
+                        <div>
+                            <h5>Free Shipping</h5>
+                            <p>Capped at $319 per order</p>
+                        </div>
+                   </div>
+
+                </div>
+        
+                <div class="service col-12 col-md-6 col-lg-4  mb-3">
+
+                    <div class="service_item">
+                        <div class="service_img">
+                            <img src="https://htmldemo.net/pronia/pronia/assets/images/shipping/icon/card.png" alt="">
+                        </div>
+                        <div>
+                            <h5>Safe Payment</h5>
+                            <p>With our payment gateway</p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="service col-12 col-md-6 col-lg-4">
+
+                    <div class="service_item">
+                        <div class="service_img">
+                            <img src="https://htmldemo.net/pronia/pronia/assets/images/shipping/icon/service.png" alt="">
+                        </div>
+                        <div>
+                            <h5>Best Services</h5>
+                            <p>Friendly & Supper Services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      
+        
+
+       </section>
+    <!-- our services section end -->
+
+
+    <!--  our products  section start -->
+        <section id="our_products">
+
+            <div class="container">
+                <div class="product_header">
+                    <h2>OUR PRODUCTS</h2>
+
+                </div>
+
+                <div class="choose_products d-flex justify-content-center flex-wrap ">
+                   
+                        <div>
+                            <a href="#">Featured</a>
+                        </div>
+                        <div>
+                           <a href="#">Bestseller</a>
+                            
+                        </div>
+                        <div>
+                            <a href="#">Latest</a>
+    
+                        </div>
+                    
+                    
+                </div>
+
+                <div class="product_cards">
+
+                    <div class="row cards">
+                        
+                        <!-- <div class="product_card col-12 col-sm-6 col-md-4 col-lg-3 ">
+
+                            <div class="product_card_content">
+                                <div class="card_img-actions">
+                                    <div class="card_img"> 
+                                        <img src="https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-1-270x300.jpg" alt="">
+                                    </div>
+                                    <div class="product_action">
+                                        <ul class="d-flex gap-1 ps-2" >
+
+                                            <li>
+                                                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#"><i class="fa-regular fa-eye"></i></a>
+
+                                            </li>
+
+                                            <li>
+                                                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+    
+                                <div class="product_text_content">
+                                    <div class="product_name">
+                                        <a href="">American Marigold</a>
+                                    </div>
+    
+                                    <div class="product_price">
+                                        <span>$23.45</span>
+                                    </div>
+                                    <div class="product_rating">
+                                        <ul class="d-flex text-center gap-2">
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                            <li><i class="fa-solid fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            
+                        </div> -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    <!--  our products  section end -->
+
+    
+    <!-- pottery_pots section start -->
+        <section id="pottery_posts">
+
+            <div class="container ">
+
+                <div class="pottery_post_cards">
+
+                    <div class="pottery_post_card card1">
+                        <div class="card_content">
+                            <h5>Collection Of Cactus</h5>
+                            <h4>Pottery Pots & Plant</h4>
+                            <button class="btn_small"><a href="">shop now</a></button>
+                        </div>
+                       
+                    </div>
+    
+                    <div class="pottery_post_card card2">
+                        <div class="card_content">
+                            <h5>New Collection</h5>
+                            <h4>Plant Port</h4>
+                            <button class="btn_small"><a href="">shop now</a></button>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="pottery_post_card card3">
+
+                        <div class="card_content">
+                            <h5>New Collection</h5>
+                            <h4>Plant Port</h4>
+                            <button class="btn_small"><a href="">shop now</a></button>
+                        </div>
+                        
+                    </div>
+    
+                    <div class="pottery_post_card card4">
+
+                        <div class="card_content">
+                            <h5>Collection Of Cactus</h5>
+                            <h4>Hanging Pots & Plant</h4>
+                            <button class="btn_small"><a href="">shop now</a></button>
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </section>
+    <!-- pottery_pots section end -->
+
+
+    <!-- new products start-->
+        <section id="new_products">
+
+            <div class="container">
+
+                <div class="product_heading">
+                    <div class="header">
+                        <h2>NEW PRODUCTS</h2>
+                    </div>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+                </div>
+
+            </div>
+
+        </section>
+    <!-- new products end-->
+    
+
+    <!-- our feedback section start-->
+        <section id="our_feedbacks">
+
+            <div class="container-fluid">
+
+                <div class="our_feedbacks_content">
+
+                    <div class="product_heading">
+
+                        <div class="header">
+                            <h2>WHAT SAY CLIENT</h2>
+                        </div>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+
+                    </div>
+
+                    <div class="feedback_cards">
+                        <div class="container">
+                            <div class="row">
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="user_cart">
+                                        <div class="user">
+                                            <div class="user_img">
+                                                <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/1.png" alt="">
+                                            </div>
+                                            <h4 class="user_name">Phoenix Baker</h4>
+                                            <span class="user_position">Client</span>
+                                        </div>
+                                        <div class="user_feedback">
+                                            <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="user_cart">
+                                        <div class="user">
+                                            <div class="user_img">
+                                                <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/1.png" alt="">
+                                            </div>
+                                            <h4 class="user_name">Phoenix Baker</h4>
+                                            <span class="user_position">Client</span>
+                                        </div>
+                                        <div class="user_feedback">
+                                            <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="user_cart">
+                                        <div class="user">
+                                            <div class="user_img">
+                                                <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/1.png" alt="">
+                                            </div>
+                                            <h4 class="user_name">Phoenix Baker</h4>
+                                            <span class="user_position">Client</span>
+                                        </div>
+                                        <div class="user_feedback">
+                                            <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+        </section>
+    <!-- our feedback section end-->
+
+
     <!-- main end -->
 
+
+    <!-- aos link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- axios link -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- js links -->
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/accardion.js"></script>
     <script src="./assets/js/slider.js"></script>
+    <script src="./assets/js/products.js"></script>
+    <script src="./assets/js/draggableSlider.js"></script>
   </body>
 </html>

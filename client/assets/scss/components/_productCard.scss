@@ -1,0 +1,107 @@
+.cards{
+  .product_card {
+
+    .product_card_content {
+      // border : 1px solid green;
+      margin-bottom: 10px;
+  
+      .card_img-actions {
+          position: relative;
+  
+        .card_img {
+          min-width: 205px;
+          img{
+              object-fit: cover;
+          }
+        }
+        .product_action {
+          visibility: hidden;
+          opacity: 0;
+          transition: all .3s ease;
+          position: absolute;
+          bottom: 0;
+          left: -20px;
+          
+          li {
+            a {
+              
+              width: 40px;
+              height: 40px;
+              display: block;
+              transition: all 0.3s ease;
+  
+              &:hover{
+                  i{
+                      color:#fff ;
+                      background-color:$main-color ;
+                  }
+              }
+  
+              i {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.25rem;
+                width: 100%;
+                height: 100%;
+                color: #525252;
+                background-color: #fff;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+                transition: all 0.3s ease;
+              }
+            }
+          }
+        }
+      }
+  
+      &:hover {
+          cursor: pointer;
+          .product_action {
+              visibility: visible;
+              opacity: 1;
+              left: 0px;
+              transition: all .3s ease;
+          }
+         
+        }
+      .product_text_content {
+        padding: 10px;
+        .product_name {
+          font-size: 1.1rem;
+          transition: all 0.3s ease;
+          &:hover {
+            color: $main-color;
+          }
+        }
+  
+        .product_price {
+          color: $main-color;
+          font-size: 1.25rem;
+          padding: 5px 0;
+        }
+  
+        .product_rating {
+          ul {
+            li {
+              color: $rating-star-color;
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+  
+    @media screen and (max-width:768px) {
+      text-align: center;
+      .product_card_content{
+        .product_text_content{
+          .product_rating{
+            ul{
+              justify-content: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
