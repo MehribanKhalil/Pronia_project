@@ -170,10 +170,22 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);;
   z-index: 2;
   cursor: pointer;
   color: #fff;
+
+  .fa-x{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 30px;
+
+    &:hover{
+      transform: rotate(180deg);
+    }
+  }
+
   &.active {
     display: block;
   }
@@ -188,17 +200,26 @@
       font-size: 1.3rem;
     }
     input {
-      border: none;
-      outline: none;
-      background: none;
-      padding: 20px 90px;
-      font-size: 2rem;
-      border-bottom: 1px solid #fff;
-
+      background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    padding-right: 55px;
+    font-weight: 300;
       &::placeholder {
         text-align: center;
-        color: $secondary-color;
+        color:#fff;
       }
+      &:focus{
+        outline: none; 
+        // border: none;
+      }
+     
     }
   }
 }

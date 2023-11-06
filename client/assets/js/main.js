@@ -7,13 +7,18 @@ const closeBtn=document.querySelector(".side_nav_close")
 const basketMenu=document.querySelector(".basket_menu")
 const basketCounet=document.querySelector(".basketCounet")
 const basketCloseBtn=document.querySelector('.basket_menu_close')
+const closeOverlayBtn=document.querySelector(".close_overlay")
+
 
 navSearchIcon.addEventListener("click", (e) => {
     e.preventDefault()
   overlay.classList.add("active");
 });
 
-
+closeOverlayBtn.addEventListener("click", (e) => {
+  e.preventDefault()
+overlay.classList.remove("active");
+});
 
 //navbar side menu
 
@@ -26,12 +31,6 @@ navSearchIcon.addEventListener("click", (e) => {
     sideBar.classList.remove('side_bar_active')
   })
 
-
-// document.addEventListener('click',function(e){
-//   if(e.target && e.target.classList == 'side_bar_active'){
-//     openMenu() ? closeMenu() : openMenu();
-//    }
-// }); 
 
 
 //navbar basket menu

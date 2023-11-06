@@ -26,6 +26,12 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- link swiper js  -->
+        <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <!-- link css -->
     <link rel="stylesheet" href="./assets/css/main.css" />
     <title>Pronia</title>
@@ -128,7 +134,7 @@
                     <h6>SHOP LAYOUT</h6>
                     <ul>
                       <li class="dropdown-item">
-                        <a href="" class="submenu_link text-uppercase"
+                        <a href="" class="submenu_link "
                           >Shop Default</a
                         >
                       </li>
@@ -235,7 +241,9 @@
 
       <!-- overlay menu start -->
       <div id="overlay">
+        <div><i class="fa-solid fa-x close_overlay"></i></div>
         <div class="container inp_div">
+            
           <p>Start typing and press Enter to search or ESC to close</p>
           <input type="search" placeholder="Search..." />
         </div>
@@ -462,6 +470,11 @@
                         </div>
                        
                     </div>
+
+                    <div class="d-flex justify-content-between align-items-center py-2">
+                        <div>Subtotal</div>
+                        <div class="subtotal"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -485,15 +498,15 @@
                 
                 <div class="row flex-column-reverse align-items-center flex-lg-row">
                     <div class="intro-left  col-md-12 col-lg-6">
-                        <h2 class="header_h2">65% OFF</h2>
-                        <h1 class="header_h1">New plant</h1>
-                        <p class="header_p">Pronia, With 100% Natural, Organic & Plant Shop.</p>
-                         <button class="btn_main"><a href="">Discover now</a></button>
+                        <h2 class="header_h2" data-aos="fade-up"  data-aos-duration="800" data-aos-delay="0">65% OFF</h2>
+                        <h1 class="header_h1"  data-aos="fade-up"   data-aos-duration="800" data-aos-delay="100" >New plant</h1>
+                        <p class="header_p" data-aos="fade-up"  data-aos-duration="800" data-aos-delay="200">Pronia, With 100% Natural, Organic & Plant Shop.</p>
+                         <button class="btn_main" data-aos="fade-up"><a href="">Discover now</a></button>
         
                     </div>
         
                     <div class="intro-right  col-md-12 col-lg-6">
-                        <div class="">
+                        <div class=""  data-aos="fade-up"  data-aos-duration="800" data-aos-delay="100">
                             <img src="" class="sliderImg" alt="">
 
                         </div>
@@ -703,23 +716,6 @@
         </section>
     <!-- pottery_pots section end -->
 
-
-    <!-- new products start-->
-        <section id="new_products">
-
-            <div class="container">
-
-                <div class="product_heading">
-                    <div class="header">
-                        <h2>NEW PRODUCTS</h2>
-                    </div>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
-                </div>
-
-            </div>
-
-        </section>
-    <!-- new products end-->
     
 
     <!-- our feedback section start-->
@@ -740,57 +736,127 @@
 
                     <div class="feedback_cards">
                         <div class="container">
-                            <div class="row">
 
-                                <div class="col-12 col-md-6 col-lg-4">
-                                    <div class="user_cart">
-                                        <div class="user">
-                                            <div class="user_img">
-                                                <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/1.png" alt="">
+                            <div id="swiper">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                        
+                                        <div class="swiper-slide">
+                                            <div class="user_cart">
+                                                <div class="user">
+                                                    <div class="user_img">
+                                                        <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/1.png" alt="">
+                                                    </div>
+                                                    <h4 class="user_name">Phoenix Baker</h4>
+                                                    <span class="user_position">Client</span>
+                                                </div>
+                                                <div class="user_feedback">
+                                                    <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
+                                                </div>
                                             </div>
-                                            <h4 class="user_name">Phoenix Baker</h4>
-                                            <span class="user_position">Client</span>
                                         </div>
-                                        <div class="user_feedback">
-                                            <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-6 col-lg-4">
-                                    <div class="user_cart">
-                                        <div class="user">
-                                            <div class="user_img">
-                                                <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/1.png" alt="">
+                        
+                                        <div class="swiper-slide">
+                                            <div class="user_cart">
+                                                <div class="user">
+                                                    <div class="user_img">
+                                                        <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/2.png" alt="">
+                                                    </div>
+                                                    <h4 class="user_name">Phoenix Baker</h4>
+                                                    <span class="user_position">Client</span>
+                                                </div>
+                                                <div class="user_feedback">
+                                                    <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
+                                                </div>
                                             </div>
-                                            <h4 class="user_name">Phoenix Baker</h4>
-                                            <span class="user_position">Client</span>
                                         </div>
-                                        <div class="user_feedback">
-                                            <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 col-md-6 col-lg-4">
-                                    <div class="user_cart">
-                                        <div class="user">
-                                            <div class="user_img">
-                                                <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/1.png" alt="">
+                        
+                                        <div class="swiper-slide">
+                                            <div class="user_cart">
+                                                <div class="user">
+                                                    <div class="user_img">
+                                                        <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/1.png" alt="">
+                                                    </div>
+                                                    <h4 class="user_name">Phoenix Baker</h4>
+                                                    <span class="user_position">Client</span>
+                                                </div>
+                                                <div class="user_feedback">
+                                                    <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
+                                                </div>
                                             </div>
-                                            <h4 class="user_name">Phoenix Baker</h4>
-                                            <span class="user_position">Client</span>
                                         </div>
-                                        <div class="user_feedback">
-                                            <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
-                                        </div>
-                                    </div>
-                                </div>
 
+                                        <div class="swiper-slide">
+                                            <div class="user_cart">
+                                                <div class="user">
+                                                    <div class="user_img">
+                                                        <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/3.png" alt="">
+                                                    </div>
+                                                    <h4 class="user_name">Phoenix Baker</h4>
+                                                    <span class="user_position">Client</span>
+                                                </div>
+                                                <div class="user_feedback">
+                                                    <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                     
+                                    
+                                    </div>  
+                                  </div>
                             </div>
+                            <!-- <div class="row">
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="user_cart">
+                                        <div class="user">
+                                            <div class="user_img">
+                                                <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/1.png" alt="">
+                                            </div>
+                                            <h4 class="user_name">Phoenix Baker</h4>
+                                            <span class="user_position">Client</span>
+                                        </div>
+                                        <div class="user_feedback">
+                                            <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="user_cart">
+                                        <div class="user">
+                                            <div class="user_img">
+                                                <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/1.png" alt="">
+                                            </div>
+                                            <h4 class="user_name">Phoenix Baker</h4>
+                                            <span class="user_position">Client</span>
+                                        </div>
+                                        <div class="user_feedback">
+                                            <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-lg-4">
+                                    <div class="user_cart">
+                                        <div class="user">
+                                            <div class="user_img">
+                                                <img src="https://htmldemo.net/pronia/pronia/assets/images/testimonial/user/1.png" alt="">
+                                            </div>
+                                            <h4 class="user_name">Phoenix Baker</h4>
+                                            <span class="user_position">Client</span>
+                                        </div>
+                                        <div class="user_feedback">
+                                            <p>Lorem ipsum dolor sit amet, conse adipisic elit, sed do eiusmod tempo incididunt ut labore et dolore. magna</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> -->
                             
                         </div>
                     </div>
+
                 </div>
 
             </div>
@@ -799,8 +865,306 @@
     <!-- our feedback section end-->
 
 
+    <!-- brands section start -->
+    <section id="brands">
+        <div class="container">
+            <div class="brand_content">
+
+
+                <div class="swiper brandSwiper">
+                    <div class="swiper-wrapper">
+
+                      <div class="swiper-slide">
+                        <div class="brand_item">
+                            <img src="https://htmldemo.net/pronia/pronia/assets/images/brand/1-1.png" alt="">
+                        </div>
+                      </div>
+
+
+                      <div class="swiper-slide">
+                        <div class="brand_item">
+                            <img src="https://htmldemo.net/pronia/pronia/assets/images/brand/1-2.png" alt="">
+                        </div>
+                      </div>
+
+
+                      <div class="swiper-slide">
+                        <div class="brand_item">
+                            <img src="	https://htmldemo.net/pronia/pronia/assets/images/brand/1-3.png" alt="">
+                        </div>
+                      </div>
+
+
+                      <div class="swiper-slide">
+                        <div class="brand_item">
+                            <img src="https://htmldemo.net/pronia/pronia/assets/images/brand/1-4.png" alt="">
+                        </div>
+                      </div>
+
+
+                      <div class="swiper-slide">
+                        <div class="brand_item">
+                            <img src="https://htmldemo.net/pronia/pronia/assets/images/brand/1-5.png" alt="">
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                
+            </div>
+        </div>
+    </section>
+    <!-- brands section end -->
+
+
+     <!-- blog section start -->
+     <section id="blog">
+        <div class="blog_content">
+            <div class="blog_heading">
+
+                <div class="header">
+                    <h2>LATEST BLOG</h2>
+                </div>
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+
+            </div>
+
+
+            <div class="blog_cards">
+
+                <div class="swiper blogSwiper">
+                    <div class="swiper-wrapper">
+
+                      <div class="swiper-slide">
+                        <div class="blog_card">
+                            <div class="blog_card_content">
+                                <h4>By: Admin 24 April 2021</h4>
+                                <h2>Aenean Vulputate Lorem</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consecteturl adipisl elit,
+                                sed do eiusmod tempor incidio ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+        
+                            <div class="blog_card_img">
+                                <img src="https://htmldemo.net/pronia/pronia/assets/images/blog/medium-size/1-1-310x220.jpg" alt="">
+                            </div>
+                        </div>
+        
+                      </div>
+
+
+                      <div class="swiper-slide">
+                        <div class="blog_card">
+                            <div class="blog_card_content">
+                                <h4>By: Admin 24 April 2021</h4>
+                                <h2>Aenean Vulputate Lorem</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consecteturl adipisl elit,
+                                sed do eiusmod tempor incidio ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+        
+                            <div class="blog_card_img">
+                                <img src="https://htmldemo.net/pronia/pronia/assets/images/blog/medium-size/1-2-310x220.jpg" alt="">
+                            </div>
+                        </div>
+        
+                      </div>
+
+
+                      <div class="swiper-slide">
+                        <div class="blog_card">
+                            <div class="blog_card_content">
+                                <h4>By: Admin 24 April 2021</h4>
+                                <h2>Aenean Vulputate Lorem</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consecteturl adipisl elit,
+                                sed do eiusmod tempor incidio ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+        
+                            <div class="blog_card_img">
+                                <img src="https://htmldemo.net/pronia/pronia/assets/images/blog/medium-size/1-3-310x220.jpg" alt="">
+                            </div>
+                        </div>
+        
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="blog_card">
+                            <div class="blog_card_content">
+                                <h4>By: Admin 24 April 2021</h4>
+                                <h2>Aenean Vulputate Lorem</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consecteturl adipisl elit,
+                                sed do eiusmod tempor incidio ut labore et dolore magna aliqua.
+                                </p>
+                            </div>
+        
+                            <div class="blog_card_img">
+                                <img src="https://htmldemo.net/pronia/pronia/assets/images/blog/medium-size/1-2-310x220.jpg" alt="">
+                            </div>
+                        </div>
+        
+                      </div>
+
+                    </div>
+                  </div>
+
+              
+            </div>
+        </div>
+    </section>
+    <!-- blog section end -->
+
     <!-- main end -->
 
+
+    <!-- footer start -->
+    <footer id="footer">
+        <div class="footer-container">
+          <div class="footer-top">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="footer-item col-lg-3">
+                  <div class="footer-widget">
+                    <div class="footer-logo">
+                      <a href="#">
+                        <img
+                          src="https://htmldemo.net/pronia/pronia/assets/images/logo/dark.png"
+                          alt="" />
+                      </a>
+                    </div>
+                    <div class="footer-text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consec adipisl elit, sed do
+                        eiusmod tempor incidio ut labore et dolore magna.
+                      </p>
+                    </div>
+                    <div class="footer-widget-icons">
+                      <ul class="icons-item">
+                        <li class="icon-item">
+                          <a href="#">
+                            <i class="fa-brands fa-square-facebook"></i>
+                          </a>
+                        </li>
+                        <li class="icon-item">
+                          <a href="#">
+                            <i class="fa-brands fa-square-youtube"></i>
+                          </a>
+                        </li>
+                        <li class="icon-item">
+                          <a href="#">
+                            <i class="fa-brands fa-square-pinterest"></i>
+                          </a>
+                        </li>
+                        <li class="icon-item">
+                          <a href="#">
+                            <i class="fa-brands fa-instagram"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-4 p-3">
+                  <div class="footer-item">
+                    <h3 class="footer_header">My Account</h3>
+                    <ul class="footer-items">
+                      <li>
+                        <a href="#">Sign In</a>
+                      </li>
+                      <li>
+                        <a href="#">View Cart</a>
+                      </li>
+                      <li>
+                        <a href="#">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="#">Contact us</a>
+                      </li>
+                      <li>
+                        <a href="#">Log in</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-4 p-3">
+                  <div class="footer-item">
+                    <h3 class="footer_header">Our Service</h3>
+                    <ul class="footer-items">
+                      <li>
+                        <a href="#">About Pronia</a>
+                      </li>
+                      <li>
+                        <a href="#">How to shop</a>
+                      </li>
+                      <li>
+                        <a href="#">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="#">Contact us</a>
+                      </li>
+                      <li>
+                        <a href="#">Log in</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-4 p-3">
+                  <div class="footer-item">
+                    <h3 class="footer_header">Useful Links</h3>
+                    <ul class="footer-items">
+                      <li>
+                        <a href="#">About Pronia</a>
+                      </li>
+                      <li>
+                        <a href="#">How to shop</a>
+                      </li>
+                      <li>
+                        <a href="#">FAQ</a>
+                      </li>
+                      <li>
+                        <a href="#">Contact us</a>
+                      </li>
+                      <li>
+                        <a href="#">Log in</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="footer-item">
+                    <div class="footer-contact pb-5">
+                      <h3  class="footer-subtitle footer_header">Got Question? Call Us</h3>
+                      <a href="#" class="d-block mt-3 fs-4">123 456 789</a>
+                      <p>Your Address Goes Here</p>
+                      <div class="payment-methods mt-1">
+                        <a href="#">
+                          <img
+                            src="https://htmldemo.net/pronia/pronia/assets/images/payment/1.png"
+                            alt="" />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom border border-top">
+            <span class="copyright">© 2023 Pronia Made By Mehi</span>
+          </div>
+        </div>
+      </footer>
+      
+    <!-- footer end -->
+
+
+    <!-- swiper slider -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!-- aos link -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -814,5 +1178,85 @@
     <script src="./assets/js/slider.js"></script>
     <script src="./assets/js/products.js"></script>
     <script src="./assets/js/draggableSlider.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          loopedSlides: 4,
+          breakpoints: {
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          },
+        });
+
+        var swiper = new Swiper(".brandSwiper", {
+          slidesPerView: 5,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            clickable: true,
+          },
+          autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+            },
+          loopedSlides: 4,
+          breakpoints: {
+            300: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            992: {
+              slidesPerView: 4,
+              spaceBetween: 50,
+            },
+          },
+        });
+
+        var swiper = new Swiper(".blogSwiper", {
+        slidesPerView: 3,
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          loopedSlides: 4,
+          breakpoints: {
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            992: {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          },
+        });
+      </script>
   </body>
 </html>
