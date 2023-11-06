@@ -1,32 +1,37 @@
-const productCards = document.querySelector('.cards')
-const basketCarts = document.querySelector('.basket_carts')
-const subtotal = document.querySelector('.subtotal')
-
-const baseUrl = 'http://localhost:3000/products'
+const productCards = document.querySelector(".cards");
+const basketCarts = document.querySelector(".basket_carts");
+const subtotal = document.querySelector(".subtotal");
+const basketCount = document.querySelector(".count");
+const baseUrl = "http://localhost:3000/products";
 
 //initial declaration
-let basketArr = []
-if (getLocalStorage('product')) {
-  basketArr = getLocalStorage('product')
+let basketArr = [];
+let filterredArr = [];
+
+if (getLocalStorage("product")) {
+  basketArr = getLocalStorage("product");
   // addBasketCart(basketArr)
-  generateBasketCards()
+  generateBasketCards();
 }
 
 //Local Storage functions
 function setLocalStorage(key, data) {
-  localStorage.setItem(key, JSON.stringify(data))
+  localStorage.setItem(key, JSON.stringify(data));
 }
 
 function getLocalStorage(key) {
-  return JSON.parse(localStorage.getItem(key)) || []
+  return JSON.parse(localStorage.getItem(key)) || [];
 }
+
+let lengthLocal = getLocalStorage("product").length;
+basketCount.textContent = lengthLocal;
 
 //create Product Cart
 function createProductCart(data) {
-  data.forEach(productProperty => {
-    const productCard = document.createElement('div')
+  data.forEach((productProperty) => {
+    const productCard = document.createElement("div");
     productCard.innerHTML = `
-    <div class="product_card_content">
+    <div class="product_card_content" data-category="${productProperty.productCategory}">
         <div class="card_img-actions">
             <div class="card_img"> 
                 <img src=${productProperty.productImage} alt="">
@@ -58,12 +63,12 @@ function createProductCart(data) {
             </div>
         </div>
     </div>
-    `
+    `;
 
-    productCard.querySelector('.addCartBtn').addEventListener('click', e => {
-      e.preventDefault()
-      if (basketArr.find(item => item.id === productProperty.id)) {
-        return
+    productCard.querySelector(".addCartBtn").addEventListener("click", (e) => {
+      e.preventDefault();
+      if (basketArr.find((item) => item.id === productProperty.id)) {
+        return;
       }
       //   basketArr.push(productProperty);
 
@@ -72,55 +77,55 @@ function createProductCart(data) {
         productImage: productProperty.productImage,
         productName: productProperty.productName,
         productPrice: productProperty.productPrice,
-        productCount:1
-      })
+        productCount: 1,
+      });
 
-        bascetCount.textContent = parseInt(bascetCount.textContent) + 1
+      
 
+      setLocalStorage("product", basketArr);
+      generateBasketCards();
 
-      setLocalStorage('product', basketArr)
-      generateBasketCards()
-    })
+      let lengthLocal = getLocalStorage("product").length;
+      basketCount.textContent = lengthLocal;
+    });
 
     // console.log(basketArr)
 
     productCard.classList.add(
-      'product_card',
-      'col-12',
-      'col-sm-6',
-      'col-md-4',
-      'col-lg-3'
-    )
-    productCards.appendChild(productCard)
-  })
+      "product_card",
+      "col-12",
+      "col-sm-6",
+      "col-md-4",
+      "col-lg-3"
+    );
+    productCards.appendChild(productCard);
+  });
 }
 
-
-
 function getSubtotal(locBasketArr) {
-    let totalSum = 0;
-    locBasketArr.forEach(productItem => {
-        totalSum += productItem.productPrice * productItem.productCount;
-    });
-    return totalSum;
+  let totalSum = 0;
+  locBasketArr.forEach((productItem) => {
+    totalSum += productItem.productPrice * productItem.productCount;
+  });
+  return totalSum;
 }
 
 function updateSubtotal(locBasketArr) {
-    const subtotalElement = document.querySelector('.subtotal');
-    if (subtotalElement) {
-        const total = getSubtotal(locBasketArr);
-        subtotalElement.textContent = total.toFixed(2);
-    } else {
-        console.error('Subtotal element not found.');
-    }
+  const subtotalElement = document.querySelector(".subtotal");
+  if (subtotalElement) {
+    const total = getSubtotal(locBasketArr);
+    subtotalElement.textContent = total.toFixed(2);
+  } else {
+    console.error("Subtotal element not found.");
+  }
 }
 
 //addBasket
 function addBasketCart(locBasketArr) {
-  basketCarts.innerHTML = ''
+  basketCarts.innerHTML = "";
 
-  locBasketArr.forEach(productItem => {
-    const basketCart = document.createElement('div')
+  locBasketArr.forEach((productItem) => {
+    const basketCart = document.createElement("div");
     // console.log(productItem);
     basketCart.innerHTML = `
             <div class="cart_img">
@@ -139,29 +144,28 @@ function addBasketCart(locBasketArr) {
             <div class="item_remove">
                 <i class="fa-solid fa-x"></i>
             </div>
-            `
+            `;
 
-    const removeButton = basketCart.querySelector('.item_remove')
-    removeButton.addEventListener('click', e => {
-      e.preventDefault()
-      basketArr = basketArr.filter(x => x.id !== productItem.id)
-      setLocalStorage('product', basketArr)
-      basketCarts.innerHTML = ''
-    //   generateBasketCards()
-      addBasketCart(basketArr)
-    })
-
+    const removeButton = basketCart.querySelector(".item_remove");
+    removeButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      basketArr = basketArr.filter((x) => x.id !== productItem.id);
+      setLocalStorage("product", basketArr);
+      basketCarts.innerHTML = "";
+      //   generateBasketCards()
+      addBasketCart(basketArr);
+    });
 
     function getSubtotal() {
-        let totalSum = 0
-        totalSum += productItem.productPrice * productItem.count
-       subtotal.textContent = Math.floor(totalSum)
+      let totalSum = 0;
+      totalSum += productItem.productPrice * productItem.count;
+      subtotal.textContent = Math.floor(totalSum);
     }
 
-    getSubtotal()
-    basketCart.classList.add('basket_cart')
-    basketCarts.appendChild(basketCart)
-  })
+    getSubtotal();
+    basketCart.classList.add("basket_cart");
+    basketCarts.appendChild(basketCart);
+  });
 
   updateSubtotal(locBasketArr);
 }
@@ -170,21 +174,55 @@ function addBasketCart(locBasketArr) {
 function getProductData() {
   axios
     .get(baseUrl)
-    .then(response => {
-      createProductCart(response.data)
+    .then((response) => {
+      createProductCart(response.data);
     })
-    .catch(error => {
-      console.error('Error: ', error)
-    })
+    .catch((error) => {
+      console.error("Error: ", error);
+    });
 }
 
 function generateBasketCards() {
-  addBasketCart(basketArr)
-//   getSubtotal(basketArr)
+  addBasketCart(basketArr);
+  //   getSubtotal(basketArr)
 }
 
+getProductData();
+generateBasketCards();
+
+//filter
+
+//
 
 
+      // const featuredProductsBtn = document.querySelector(".featuredProducts");
+      // const bestSellerProductsBtn=document.querySelector('.bestSellerProducts')
+      // const bestServicesProductsBtn=document.querySelect('bestServicesProducts')
 
-getProductData()
-generateBasketCards()
+      // featuredProductsBtn.addEventListener("click", () => {
+      //   const cards = document.querySelectorAll(".product_card ");
+      //   cards.forEach((card) => {
+      //     if (card.children[0].getAttribute("data-category") === "Featured") {
+      //       card.style.display  ="block"
+      //     }
+      //     else{
+      //       card.style.display  ="none"
+
+      //     }
+      //   });
+
+      // });
+
+      // bestSellerProductsBtn.addEventListener("click", () => {
+      //   const cards = document.querySelectorAll(".product_card_content");
+      //   cards.forEach((card) => {
+      //     if (card.getAttribute("data-category") === "Bestseller") {
+      //       card.style.display  ="block"
+      //     }
+      //     else{
+      //       card.style.display  ="none"
+
+      //     }
+      //   });
+
+      // });
