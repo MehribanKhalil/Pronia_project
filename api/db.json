@@ -6,15 +6,17 @@
       "productName": "American Marigold",
       "productPrice": "23.45",
       "productCategory": "Latest",
-      "productRating": 5
+      "productRating": 5,
+      "isNew": false
     },
     {
       "id": 2,
       "productImage": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-2-270x300.jpg",
       "productName": "Black Eyed Susan",
       "productPrice": "25.45",
-      "productCategory": "Featured",
-      "productRating": 5
+      "productCategory": "Bestseller",
+      "productRating": 5,
+      "isNew": true
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "productName": "Bleeding Heart",
       "productPrice": "30.45",
       "productCategory": "Featured",
-      "productRating": 5
+      "productRating": 5,
+      "isNew": false
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "productName": "Bloody Cranesbill",
       "productPrice": "45.00",
       "productCategory": "Featured",
-      "productRating": 5
+      "productRating": 5,
+      "isNew": true
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "productName": "Butterfly Weed",
       "productPrice": "50.45",
       "productCategory": "Latest",
-      "productRating": 5
+      "productRating": 5,
+      "isNew": false
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "productName": "Common Yarrow",
       "productPrice": "65.00",
       "productCategory": "Featured",
-      "productRating": 5
+      "productRating": 5,
+      "isNew": true
     },
     {
       "id": 7,
@@ -54,15 +60,17 @@
       "productName": "Doublefile Viburnum",
       "productPrice": "67.45",
       "productCategory": "Bestseller",
-      "productRating": 5
+      "productRating": 5,
+      "isNew": true
     },
     {
       "id": 8,
       "productImage": "https://htmldemo.net/pronia/pronia/assets/images/product/medium-size/1-8-270x300.jpg",
       "productName": "Feather Reed Grass",
       "productPrice": "20.00",
-      "productCategory": "Featured",
-      "productRating": 5
+      "productCategory": "Latest",
+      "productRating": 5,
+      "isNew": false
     }
   ]
 }

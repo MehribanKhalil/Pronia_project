@@ -48,14 +48,14 @@ basketCloseBtn.addEventListener('click',()=>{
 //Initialize Swiper 
 
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 3,
+      slidesPerView: 4,
       spaceBetween: 30,
       loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      loopedSlides: 4,
+      autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+          },
+      loopedSlides: 3,
       breakpoints: {
         300: {
           slidesPerView: 1,
@@ -80,8 +80,8 @@ basketCloseBtn.addEventListener('click',()=>{
         clickable: true,
       },
       autoplay: {
-    delay: 2000,
-    disableOnInteraction: false,
+      delay: 3000,
+      disableOnInteraction: false,
         },
       loopedSlides: 4,
       breakpoints: {

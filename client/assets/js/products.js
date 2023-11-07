@@ -2,11 +2,11 @@ const productCards = document.querySelector(".cards");
 const basketCarts = document.querySelector(".basket_carts");
 const subtotal = document.querySelector(".subtotal");
 const basketCount = document.querySelector(".count");
+
 const baseUrl = "http://localhost:3000/products";
 
 //initial declaration
 let basketArr = [];
-let filterredArr = [];
 
 if (getLocalStorage("product")) {
   basketArr = getLocalStorage("product");
@@ -80,8 +80,6 @@ function createProductCart(data) {
         productCount: 1,
       });
 
-      
-
       setLocalStorage("product", basketArr);
       generateBasketCards();
 
@@ -102,6 +100,7 @@ function createProductCart(data) {
   });
 }
 
+//get subtotal
 function getSubtotal(locBasketArr) {
   let totalSum = 0;
   locBasketArr.forEach((productItem) => {
@@ -120,7 +119,7 @@ function updateSubtotal(locBasketArr) {
   }
 }
 
-//addBasket
+//add Basket cart
 function addBasketCart(locBasketArr) {
   basketCarts.innerHTML = "";
 
@@ -128,22 +127,22 @@ function addBasketCart(locBasketArr) {
     const basketCart = document.createElement("div");
     // console.log(productItem);
     basketCart.innerHTML = `
-            <div class="cart_img">
-                <img src=${productItem.productImage} alt="">
-            </div>
+    <div class="cart_img">
+    <img src=${productItem.productImage} alt="">
+    </div>
 
-            <div class="cart_content">
-                <h6>${productItem.productName}</h6>
-                <div>
-                    <span class="item_count">${productItem.productCount}</span>
-                    <span>x</span>
-                    <span class="item_price">$${productItem.productPrice}</span>
-                </div>
-            </div>
+    <div class="cart_content">
+        <h6>${productItem.productName}</h6>
+        <div>
+            <span class="item_count">${productItem.productCount}</span>
+            <span>x</span>
+            <span class="item_price">$${productItem.productPrice}</span>
+        </div>
+    </div>
 
-            <div class="item_remove">
-                <i class="fa-solid fa-x"></i>
-            </div>
+    <div class="item_remove">
+        <i class="fa-solid fa-x"></i>
+    </div>
             `;
 
     const removeButton = basketCart.querySelector(".item_remove");
@@ -151,10 +150,15 @@ function addBasketCart(locBasketArr) {
       e.preventDefault();
       basketArr = basketArr.filter((x) => x.id !== productItem.id);
       setLocalStorage("product", basketArr);
+
+      let lengthLocal = getLocalStorage("product").length;
+      basketCount.textContent = lengthLocal;
+
       basketCarts.innerHTML = "";
       //   generateBasketCards()
       addBasketCart(basketArr);
     });
+
 
     function getSubtotal() {
       let totalSum = 0;
@@ -190,39 +194,43 @@ function generateBasketCards() {
 getProductData();
 generateBasketCards();
 
-//filter
+//filter products
+const featuredProductsBtn = document.querySelector(".featuredProducts");
+const bestSellerProductsBtn = document.querySelector(".bestSellerProducts");
+const latestProductsBtn = document.querySelector(".latestProducts");
 
-//
+featuredProductsBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const cards = document.querySelectorAll(".product_card ");
+  cards.forEach((card) => {
+    if (card.children[0].getAttribute("data-category") === "Featured") {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
 
+bestSellerProductsBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const cards = document.querySelectorAll(".product_card ");
+  cards.forEach((card) => {
+    if (card.children[0].getAttribute("data-category") === "Bestseller") {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
 
-      // const featuredProductsBtn = document.querySelector(".featuredProducts");
-      // const bestSellerProductsBtn=document.querySelector('.bestSellerProducts')
-      // const bestServicesProductsBtn=document.querySelect('bestServicesProducts')
-
-      // featuredProductsBtn.addEventListener("click", () => {
-      //   const cards = document.querySelectorAll(".product_card ");
-      //   cards.forEach((card) => {
-      //     if (card.children[0].getAttribute("data-category") === "Featured") {
-      //       card.style.display  ="block"
-      //     }
-      //     else{
-      //       card.style.display  ="none"
-
-      //     }
-      //   });
-
-      // });
-
-      // bestSellerProductsBtn.addEventListener("click", () => {
-      //   const cards = document.querySelectorAll(".product_card_content");
-      //   cards.forEach((card) => {
-      //     if (card.getAttribute("data-category") === "Bestseller") {
-      //       card.style.display  ="block"
-      //     }
-      //     else{
-      //       card.style.display  ="none"
-
-      //     }
-      //   });
-
-      // });
+latestProductsBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const cards = document.querySelectorAll(".product_card");
+  cards.forEach((card) => {
+    if (card.children[0].getAttribute("data-category") === "Latest") {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
