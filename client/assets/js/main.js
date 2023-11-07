@@ -45,4 +45,110 @@ basketCloseBtn.addEventListener('click',()=>{
 })
 
 
+//Initialize Swiper 
 
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loopedSlides: 4,
+      breakpoints: {
+        300: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
+
+    var swiper = new Swiper(".brandSwiper", {
+      slidesPerView: 5,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        clickable: true,
+      },
+      autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+        },
+      loopedSlides: 4,
+      breakpoints: {
+        300: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
+
+    var swiper = new Swiper(".blogSwiper", {
+    slidesPerView: 3,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      loopedSlides: 4,
+      breakpoints: {
+        300: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
+    });
+
+    var swiper = new Swiper(".cardSwiper", {
+      slidesPerView: 5,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        clickable: true,
+      },
+      autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+        },
+      loopedSlides: 4,
+      breakpoints: {
+        300: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
